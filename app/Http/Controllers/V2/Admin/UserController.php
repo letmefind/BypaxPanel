@@ -447,7 +447,7 @@ class UserController extends Controller
         $subject = $request->input('subject');
         $content = $request->input('content');
         $templateValue = [
-            'name' => admin_setting('app_name', 'XBoard'),
+            'name' => admin_setting('app_name', 'Bypax Panel'),
             'url' => admin_setting('app_url'),
             'content' => $content
         ];

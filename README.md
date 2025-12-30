@@ -10,7 +10,7 @@
 
 ## 📖 Introduction
 
-Bypax Panel is a modern panel system built on Laravel 11, focusing on providing a clean and efficient user experience. It is a rebranded and enhanced version of Xboard, with improved internationalization support including English, Chinese, Korean, and Persian languages.
+Bypax Panel is a modern panel system built on Laravel 11, focusing on providing a clean and efficient user experience. **Bypax Panel is originally based on [Xboard](https://github.com/cedar2025/Xboard)**, which in turn is based on [V2Board](https://github.com/v2board/v2board). This project has been rebranded and enhanced with new features and improved internationalization support including English, Chinese, Korean, and Persian languages.
 
 ## ✨ Features
 
@@ -21,6 +21,7 @@ Bypax Panel is a modern panel system built on Laravel 11, focusing on providing 
 - 🎯 Optimized system architecture for better maintainability
 - 🌍 Multi-language support: English, Chinese, Korean, and Persian
 - 🔧 Simplified installation process with automated scripts
+- 🔐 **New Protocol Support**: OpenVPN, WireGuard, and IKE tunnel protocols
 
 ## 🚀 Quick Start
 
