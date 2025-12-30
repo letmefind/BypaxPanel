@@ -150,11 +150,11 @@ class MailService
         SendEmailJob::dispatch([
             'email' => $user->email,
             'subject' => __('The traffic usage in :app_name has reached 80%', [
-                'app_name' => admin_setting('app_name', 'XBoard')
+                'app_name' => admin_setting('app_name', 'Bypax Panel')
             ]),
             'template_name' => 'remindTraffic',
             'template_value' => [
-                'name' => admin_setting('app_name', 'XBoard'),
+                'name' => admin_setting('app_name', 'Bypax Panel'),
                 'url' => admin_setting('app_url')
             ]
         ]);
@@ -169,11 +169,11 @@ class MailService
         SendEmailJob::dispatch([
             'email' => $user->email,
             'subject' => __('The service in :app_name is about to expire', [
-                'app_name' => admin_setting('app_name', 'XBoard')
+                'app_name' => admin_setting('app_name', 'Bypax Panel')
             ]),
             'template_name' => 'remindExpire',
             'template_value' => [
-                'name' => admin_setting('app_name', 'XBoard'),
+                'name' => admin_setting('app_name', 'Bypax Panel'),
                 'url' => admin_setting('app_url')
             ]
         ]);
