@@ -95,28 +95,28 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
     }
   },
   "knowledge": {
-    "title": "Knowledge Base",
-    "description": "Here you can configure the knowledge base, including adding, deleting, and editing operations.",
+    "title": "پایگاه دانش",
+    "description": "در اینجا می‌توانید پایگاه دانش را پیکربندی کنید، شامل عملیات افزودن، حذف و ویرایش.",
     "columns": {
-      "id": "ID",
-      "status": "Status",
-      "title": "Title",
-      "category": "Category",
-      "actions": "Actions"
+      "id": "شناسه",
+      "status": "وضعیت",
+      "title": "عنوان",
+      "category": "دسته‌بندی",
+      "actions": "عملیات"
     },
     "form": {
-      "add": "Add Knowledge",
-      "edit": "Edit Knowledge",
-      "title": "Title",
-      "titlePlaceholder": "Please enter knowledge title",
-      "category": "Category",
-      "categoryPlaceholder": "Please enter category, it will be automatically classified",
-      "language": "Language",
-      "languagePlaceholder": "Please select language",
-      "content": "Content",
-      "show": "Show",
-      "cancel": "Cancel",
-      "submit": "Submit"
+      "add": "افزودن دانش",
+      "edit": "ویرایش دانش",
+      "title": "عنوان",
+      "titlePlaceholder": "لطفاً عنوان دانش را وارد کنید",
+      "category": "دسته‌بندی",
+      "categoryPlaceholder": "لطفاً دسته‌بندی را وارد کنید، به طور خودکار طبقه‌بندی می‌شود",
+      "language": "زبان",
+      "languagePlaceholder": "لطفاً زبان را انتخاب کنید",
+      "content": "محتوای",
+      "show": "نمایش",
+      "cancel": "لغو",
+      "submit": "ثبت"
     },
     "languages": {
       "en-US": "English",
@@ -128,17 +128,17 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
       "fa-IR": "فارسی"
     },
     "messages": {
-      "deleteConfirm": "Confirm Delete",
-      "deleteDescription": "This action will permanently delete this knowledge base record and cannot be recovered. Are you sure you want to continue?",
-      "deleteButton": "Delete",
-      "operationSuccess": "Operation Successful"
+      "deleteConfirm": "تأیید حذف",
+      "deleteDescription": "این عمل به طور دائمی این رکورد پایگاه دانش را حذف می‌کند و قابل بازیابی نیست. آیا مطمئن هستید که می‌خواهید ادامه دهید؟",
+      "deleteButton": "حذف",
+      "operationSuccess": "عملیات موفق بود"
     },
     "toolbar": {
-      "searchPlaceholder": "Search knowledge...",
-      "reset": "Reset",
-      "sortModeHint": "Drag knowledge items to sort, click save when done",
-      "editSort": "Edit Sort",
-      "saveSort": "Save Sort"
+      "searchPlaceholder": "جستجوی دانش...",
+      "reset": "بازنشانی",
+      "sortModeHint": "آیتم‌های دانش را بکشید تا مرتب شوند، پس از اتمام روی ذخیره کلیک کنید",
+      "editSort": "ویرایش ترتیب",
+      "saveSort": "ذخیره ترتیب"
     }
   },
   "search": {
@@ -172,76 +172,76 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
     "ticketManagement": "مدیریت تیکت"
   },
   "plugin": {
-    "title": "Plugin Management",
-    "description": "Manage and configure system plugins",
+    "title": "مدیریت افزونه‌ها",
+    "description": "مدیریت و پیکربندی افزونه‌های سیستم",
     "search": {
-      "placeholder": "Search plugin name or description..."
+      "placeholder": "جستجوی نام یا توضیحات افزونه..."
     },
     "type": {
-      "placeholder": "Select Plugin Type",
-      "all": "All Types"
+      "placeholder": "انتخاب نوع افزونه",
+      "all": "همه انواع"
     },
     "tabs": {
-      "all": "All Plugins",
-      "installed": "Installed",
-      "available": "Available"
+      "all": "همه افزونه‌ها",
+      "installed": "نصب شده",
+      "available": "در دسترس"
     },
     "status": {
-      "enabled": "Enabled",
-      "disabled": "Disabled",
-      "not_installed": "Not Installed",
-      "protected": "Protected",
-      "filter_placeholder": "Install Status",
-      "all": "All Status",
-      "installed": "Installed",
-      "available": "Available"
+      "enabled": "فعال",
+      "disabled": "غیرفعال",
+      "not_installed": "نصب نشده",
+      "protected": "محافظت شده",
+      "filter_placeholder": "وضعیت نصب",
+      "all": "همه وضعیت‌ها",
+      "installed": "نصب شده",
+      "available": "در دسترس"
     },
     "button": {
-      "install": "Install",
-      "upgrade": "Upgrade",
-      "config": "Configure",
-      "enable": "Enable",
-      "disable": "Disable",
-      "uninstall": "Uninstall",
-      "readme": "View Documentation"
+      "install": "نصب",
+      "upgrade": "ارتقا",
+      "config": "پیکربندی",
+      "enable": "فعال کردن",
+      "disable": "غیرفعال کردن",
+      "uninstall": "حذف نصب",
+      "readme": "مشاهده مستندات"
     },
     "upload": {
-      "button": "Upload Plugin",
-      "title": "Upload Plugin",
-      "description": "Upload a plugin package (.zip)",
-      "dragText": "Drag and drop plugin package here, or",
-      "clickText": "browse",
-      "supportText": "Supports .zip files only",
-      "uploading": "Uploading...",
+      "button": "آپلود افزونه",
+      "title": "آپلود افزونه",
+      "description": "آپلود بسته افزونه (.zip)",
+      "dragText": "بسته افزونه را اینجا بکشید و رها کنید، یا",
+      "clickText": "مرور",
+      "supportText": "فقط فایل‌های .zip پشتیبانی می‌شود",
+      "uploading": "در حال آپلود...",
       "error": {
-        "format": "Only .zip files are supported"
+        "format": "فقط فایل‌های .zip پشتیبانی می‌شود"
       }
     },
     "delete": {
-      "title": "Delete Plugin",
-      "description": "Are you sure you want to delete this plugin? This action cannot be undone.",
-      "button": "Delete"
+      "title": "حذف افزونه",
+      "description": "آیا مطمئن هستید که می‌خواهید این افزونه را حذف کنید؟ این عمل قابل بازگشت نیست.",
+      "button": "حذف"
     },
     "uninstall": {
-      "title": "Uninstall Plugin",
-      "description": "Are you sure you want to uninstall this plugin? Plugin data will be cleared after uninstallation.",
-      "button": "Uninstall"
+      "title": "حذف نصب افزونه",
+      "description": "آیا مطمئن هستید که می‌خواهید این افزونه را حذف نصب کنید؟ داده‌های افزونه پس از حذف نصب پاک می‌شود.",
+      "button": "حذف نصب"
     },
     "upgrade": {
-      "title": "Upgrade Plugin",
-      "description": "Are you sure you want to upgrade this plugin? The plugin will be temporarily unavailable during the upgrade process.",
-      "button": "Upgrade"
+      "title": "ارتقای افزونه",
+      "description": "آیا مطمئن هستید که می‌خواهید این افزونه را ارتقا دهید؟ افزونه در طول فرآیند ارتقا به طور موقت در دسترس نخواهد بود.",
+      "button": "ارتقا"
     },
     "config": {
-      "title": "Configuration",
-      "description": "Modify plugin configuration",
-      "save": "Save",
-      "cancel": "Cancel"
+      "title": "پیکربندی",
+      "description": "تغییر پیکربندی افزونه",
+      "save": "ذخیره",
+      "cancel": "لغو"
     },
     "readme": {
-      "title": "Plugin Documentation"
+      "title": "مستندات افزونه"
     },
-    "author": "Author",
+    "author": "نویسنده",
     "messages": {
       "installSuccess": "Plugin installed successfully",
       "installError": "Failed to install plugin",
@@ -251,15 +251,15 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
       "uninstallError": "Failed to uninstall plugin",
       "enableSuccess": "Plugin enabled successfully",
       "enableError": "Failed to enable plugin",
-      "disableSuccess": "Plugin disabled successfully",
-      "disableError": "Failed to disable plugin",
-      "configLoadError": "Failed to load plugin configuration",
-      "configSaveSuccess": "Configuration saved successfully",
-      "configSaveError": "Failed to save configuration",
-      "uploadSuccess": "Plugin uploaded successfully",
-      "uploadError": "Failed to upload plugin",
-      "deleteSuccess": "Plugin deleted successfully",
-      "deleteError": "Failed to delete plugin"
+      "disableSuccess": "افزونه با موفقیت غیرفعال شد",
+      "disableError": "غیرفعال کردن افزونه ناموفق بود",
+      "configLoadError": "بارگذاری پیکربندی افزونه ناموفق بود",
+      "configSaveSuccess": "پیکربندی با موفقیت ذخیره شد",
+      "configSaveError": "ذخیره پیکربندی ناموفق بود",
+      "uploadSuccess": "افزونه با موفقیت آپلود شد",
+      "uploadError": "آپلود افزونه ناموفق بود",
+      "deleteSuccess": "افزونه با موفقیت حذف شد",
+      "deleteError": "حذف افزونه ناموفق بود"
     }
   },
   "settings": {
