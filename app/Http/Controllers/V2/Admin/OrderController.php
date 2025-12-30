@@ -152,7 +152,7 @@ class OrderController extends Controller
 
         $orderService = new OrderService($order);
         if (!$orderService->paid('manual_operation')) {
-            return $this->fail([500, '更新失败']);
+            return $this->fail([500, 'Update failed']);
         }
         return $this->success(true);
     }
@@ -169,7 +169,7 @@ class OrderController extends Controller
 
         $orderService = new OrderService($order);
         if (!$orderService->cancel()) {
-            return $this->fail([400, '更新失败']);
+            return $this->fail([400, 'Update failed']);
         }
         return $this->success(true);
     }
@@ -190,7 +190,7 @@ class OrderController extends Controller
             $order->update($params);
         } catch (\Exception $e) {
             Log::error($e);
-            return $this->fail([500, '更新失败']);
+            return $this->fail([500, 'Update failed']);
         }
 
         return $this->success(true);

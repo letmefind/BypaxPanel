@@ -40,7 +40,7 @@ class RouteController extends Controller
                 return $this->success(true);
             } catch (\Exception $e) {
                 Log::error($e);
-                return $this->fail([500,'保存失败']);
+                return $this->fail([500,'Save failed']);
             }
         }
         try{
@@ -48,7 +48,7 @@ class RouteController extends Controller
             return $this->success(true);
         }catch(\Exception $e){
             Log::error($e);
-            return $this->fail([500,'创建失败']);
+            return $this->fail([500,'Creation failed']);
         }
     }
 
@@ -56,7 +56,7 @@ class RouteController extends Controller
     {
         $route = ServerRoute::find($request->input('id'));
         if (!$route) throw new ApiException('路由不存在');
-        if (!$route->delete()) throw new ApiException('删除失败');
+        if (!$route->delete()) throw new ApiException('Deletion failed');
         return [
             'data' => true
         ];

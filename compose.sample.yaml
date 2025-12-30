@@ -1,6 +1,8 @@
+name: bypaxpanel
+
 services:
   web:
-    image: ghcr.io/cedar2025/xboard:new
+    image: ghcr.io/letmefind/bypaxpanel:new
     volumes:
       - ./.docker/.data/redis/:/data/
       - ./:/www/
@@ -12,7 +14,7 @@ services:
     command: php artisan octane:start --port=7001 --host=0.0.0.0
     restart: always
   horizon:
-    image: ghcr.io/cedar2025/xboard:new
+    image: ghcr.io/letmefind/bypaxpanel:new
     volumes:
       - ./.docker/.data/redis/:/data/
       - ./:/www/
@@ -27,5 +29,3 @@ services:
     restart: unless-stopped
     volumes:
       - ./.docker/.data/redis:/data
-    sysctls:
-      net.core.somaxconn: 1024

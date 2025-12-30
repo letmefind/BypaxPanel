@@ -68,7 +68,7 @@ class CouponController extends Controller
             DB::commit();
         } catch (\Exception $e) {
             \Log::error($e);
-            return $this->fail([500, '保存失败']);
+            return $this->fail([500, 'Save failed']);
         }
     }
 
@@ -86,7 +86,7 @@ class CouponController extends Controller
         }
         $coupon->show = !$coupon->show;
         if (!$coupon->save()) {
-            return $this->fail([500, '保存失败']);
+            return $this->fail([500, 'Save failed']);
         }
         return $this->success(true);
     }
@@ -104,14 +104,14 @@ class CouponController extends Controller
                 $params['code'] = Helper::randomChar(8);
             }
             if (!Coupon::create($params)) {
-                return $this->fail([500, '创建失败']);
+                return $this->fail([500, 'Creation failed']);
             }
         } else {
             try {
                 Coupon::find($request->input('id'))->update($params);
             } catch (\Exception $e) {
                 \Log::error($e);
-                return $this->fail([500, '保存失败']);
+                return $this->fail([500, 'Save failed']);
             }
         }
 
@@ -178,7 +178,7 @@ class CouponController extends Controller
             return $this->fail([400202, '优惠券不存在']);
         }
         if (!$coupon->delete()) {
-            return $this->fail([500, '删除失败']);
+            return $this->fail([500, 'Deletion failed']);
         }
 
         return $this->success(true);

@@ -12,6 +12,7 @@
       version: "{{ $version }}",
       logo: "{{ $logo }}",
       secure_path: "{{ $secure_path }}",
+      languages: ['en-US', 'zh-CN', 'ko-KR', 'fa-IR']
     };
   </script>
   <script type="module" crossorigin src="/assets/admin/assets/index.js"></script>
@@ -20,6 +21,7 @@
   <script src="/assets/admin/locales/en-US.js"></script>
   <script src="/assets/admin/locales/zh-CN.js"></script>
   <script src="/assets/admin/locales/ko-KR.js"></script>
+  <script src="/assets/admin/locales/fa-IR.js"></script>
 </head>
 
 <body>

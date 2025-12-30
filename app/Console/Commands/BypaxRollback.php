@@ -5,21 +5,21 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 
-class XboardRollback extends Command
+class BypaxRollback extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'xboard:rollback';
+    protected $signature = 'bypax:rollback';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'xboard 回滚';
+    protected $description = 'Bypax Panel rollback';
 
     /**
      * Create a new command instance.
@@ -38,8 +38,9 @@ class XboardRollback extends Command
      */
     public function handle()
     {
-        $this->info('正在回滚数据库请稍等...');
+        $this->info('Rolling back database, please wait...');
             \Artisan::call("migrate:rollback");
             $this->info(\Artisan::output());
     }
 }
+

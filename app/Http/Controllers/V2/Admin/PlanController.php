@@ -59,11 +59,11 @@ class PlanController extends Controller
             } catch (\Exception $e) {
                 DB::rollBack();
                 Log::error($e);
-                return $this->fail([500, '保存失败']);
+                return $this->fail([500, 'Save failed']);
             }
         }
         if (!Plan::create($params)) {
-            return $this->fail([500, '创建失败']);
+            return $this->fail([500, 'Creation failed']);
         }
         return $this->success(true);
     }
@@ -102,7 +102,7 @@ class PlanController extends Controller
             $plan->update($updateData);
         } catch (\Exception $e) {
             Log::error($e);
-            return $this->fail([500, '保存失败']);
+            return $this->fail([500, 'Save failed']);
         }
 
         return $this->success(true);
@@ -125,7 +125,7 @@ class PlanController extends Controller
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e);
-            return $this->fail([500, '保存失败']);
+            return $this->fail([500, 'Save failed']);
         }
         return $this->success(true);
     }

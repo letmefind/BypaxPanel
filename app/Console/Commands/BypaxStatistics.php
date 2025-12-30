@@ -7,21 +7,21 @@ use Illuminate\Console\Command;
 use App\Models\Stat;
 use Illuminate\Support\Facades\Log;
 
-class XboardStatistics extends Command
+class BypaxStatistics extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'xboard:statistics';
+    protected $signature = 'bypax:statistics';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = '统计任务';
+    protected $description = 'Statistics task';
 
     /**
      * Create a new command instance.
@@ -45,7 +45,7 @@ class XboardStatistics extends Command
         // $this->statUser();
         // $this->statServer();
         $this->stat();
-        info('统计任务执行完毕。耗时:' . (microtime(true) - $startAt) / 1000);
+        info('Statistics task completed. Time taken: ' . (microtime(true) - $startAt) / 1000);
     }
 
 
@@ -73,3 +73,4 @@ class XboardStatistics extends Command
         }
     }
 }
+

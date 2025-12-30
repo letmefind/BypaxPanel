@@ -54,7 +54,7 @@ class PaymentController extends Controller
             return $this->fail([400202, '支付方式不存在']);
         $payment->enable = !$payment->enable;
         if (!$payment->save())
-            return $this->fail([500, '保存失败']);
+            return $this->fail([500, 'Save failed']);
         return $this->success(true);
     }
 
@@ -87,13 +87,13 @@ class PaymentController extends Controller
                 $payment->update($params);
             } catch (\Exception $e) {
                 Log::error($e);
-                return $this->fail([500, '保存失败']);
+                return $this->fail([500, 'Save failed']);
             }
             return $this->success(true);
         }
         $params['uuid'] = Helper::randomChar(8);
         if (!Payment::create($params)) {
-            return $this->fail([500, '保存失败']);
+            return $this->fail([500, 'Save failed']);
         }
         return $this->success(true);
     }
@@ -125,7 +125,7 @@ class PaymentController extends Controller
             DB::commit();
         } catch (\Exception $e) {
             DB::rollBack();
-            return $this->fail([500, '保存失败']);
+            return $this->fail([500, 'Save failed']);
         }
 
         return $this->success(true);

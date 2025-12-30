@@ -248,7 +248,7 @@ class UserController extends Controller
             $user->update($params);
         } catch (\Exception $e) {
             Log::error($e);
-            return $this->fail([500, '保存失败']);
+            return $this->fail([500, 'Save failed']);
         }
         return $this->success(true);
     }
@@ -513,7 +513,7 @@ class UserController extends Controller
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e);
-            return $this->fail([500, '删除失败']);
+            return $this->fail([500, 'Deletion failed']);
         }
     }
 }

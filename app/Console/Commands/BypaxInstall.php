@@ -19,21 +19,21 @@ use function Laravel\Prompts\select;
 use App\Models\Plugin;
 use Illuminate\Support\Str;
 
-class XboardInstall extends Command
+class BypaxInstall extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'xboard:install';
+    protected $signature = 'bypax:install';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'xboard 初始化安装';
+    protected $description = 'Bypax Panel initialization installation';
 
     /**
      * Create a new command instance.
@@ -57,60 +57,62 @@ class XboardInstall extends Command
             $enableSqlite = getenv('ENABLE_SQLITE', false);
             $enableRedis = getenv('ENABLE_REDIS', false);
             $adminAccount = getenv('ADMIN_ACCOUNT', false);
-            $this->info("__    __ ____                      _  ");
-            $this->info("\ \  / /| __ )  ___   __ _ _ __ __| | ");
-            $this->info(" \ \/ / | __ \ / _ \ / _` | '__/ _` | ");
-            $this->info(" / /\ \ | |_) | (_) | (_| | | | (_| | ");
-            $this->info("/_/  \_\|____/ \___/ \__,_|_|  \__,_| ");
+            $this->info(' ____                      _         ');
+            $this->info('| __ )  __ _ _ __  _ __   / \   _ __ ');
+            $this->info('|  _ \ / _` | \'_ \| \'_ \ / _ \ | \'__|');
+            $this->info('| |_) | (_| | |_) | |_) / ___ \| |   ');
+            $this->info('|____/ \__,_| .__/| .__/_/   \_\_|   ');
+            $this->info('            |_|   |_|                 ');
+            $this->info('            Panel                     ');
             if (
                 (File::exists(base_path() . '/.env') && $this->getEnvValue('INSTALLED'))
                 || (getenv('INSTALLED', false) && $isDocker)
             ) {
                 $securePath = admin_setting('secure_path', admin_setting('frontend_admin_path', hash('crc32b', config('app.key'))));
-                $this->info("访问 http(s)://你的站点/{$securePath} 进入管理面板，你可以在用户中心修改你的密码。");
-                $this->warn("如需重新安装请清空目录下 .env 文件的内容（Docker安装方式不可以删除此文件）");
-                $this->warn("快捷清空.env命令：");
+                $this->info("Access http(s)://your-site/{$securePath} to enter the admin panel. You can change your password in the user center.");
+                $this->warn("To reinstall, please clear the contents of the .env file in the directory (Docker installation method cannot delete this file)");
+                $this->warn("Quick command to clear .env:");
                 note('rm .env && touch .env');
                 return;
             }
             if (is_dir(base_path() . '/.env')) {
-                $this->error('😔：安装失败，Docker环境下安装请保留空的 .env 文件');
+                $this->error('Installation failed: Please keep an empty .env file in Docker environment');
                 return;
             }
-            // 选择数据库类型
+            // Select database type
             $dbType = $enableSqlite ? 'sqlite' : select(
-                label: '请选择数据库类型',
+                label: 'Please select database type',
                 options: [
-                    'sqlite' => 'SQLite (无需额外安装)',
+                    'sqlite' => 'SQLite (no additional installation required)',
                     'mysql' => 'MySQL',
                     'postgresql' => 'PostgreSQL'
                 ],
                 default: 'sqlite'
             );
 
-            // 使用 match 表达式配置数据库
+            // Configure database using match expression
             $envConfig = match ($dbType) {
                 'sqlite' => $this->configureSqlite(),
                 'mysql' => $this->configureMysql(),
                 'postgresql' => $this->configurePostgresql(),
-                default => throw new \InvalidArgumentException("不支持的数据库类型: {$dbType}")
+                default => throw new \InvalidArgumentException("Unsupported database type: {$dbType}")
             };
 
             if (is_null($envConfig)) {
-                return; // 用户选择退出安装
+                return; // User chose to exit installation
             }
             $envConfig['APP_KEY'] = 'base64:' . base64_encode(Encrypter::generateKey('AES-256-CBC'));
             $isReidsValid = false;
             while (!$isReidsValid) {
-                // 判断是否为Docker环境
-                if ($isDocker == 'true' && ($enableRedis || confirm(label: '是否启用Docker内置的Redis', default: true, yes: '启用', no: '不启用'))) {
+                // Check if it's Docker environment
+                if ($isDocker == 'true' && ($enableRedis || confirm(label: 'Enable Docker built-in Redis?', default: true, yes: 'Enable', no: 'Disable'))) {
                     $envConfig['REDIS_HOST'] = '/data/redis.sock';
                     $envConfig['REDIS_PORT'] = 0;
                     $envConfig['REDIS_PASSWORD'] = null;
                 } else {
-                    $envConfig['REDIS_HOST'] = text(label: '请输入Redis地址', default: '127.0.0.1', required: true);
-                    $envConfig['REDIS_PORT'] = text(label: '请输入Redis端口', default: '6379', required: true);
-                    $envConfig['REDIS_PASSWORD'] = text(label: '请输入redis密码(默认: null)', default: '');
+                    $envConfig['REDIS_HOST'] = text(label: 'Please enter Redis address', default: '127.0.0.1', required: true);
+                    $envConfig['REDIS_PORT'] = text(label: 'Please enter Redis port', default: '6379', required: true);
+                    $envConfig['REDIS_PASSWORD'] = text(label: 'Please enter Redis password (default: null)', default: '');
                 }
                 $redisConfig = [
                     'client' => 'phpredis',
@@ -126,24 +128,24 @@ class XboardInstall extends Command
                     $redis->ping();
                     $isReidsValid = true;
                 } catch (\Exception $e) {
-                    // 连接失败，输出错误消息
-                    $this->error("redis连接失败：" . $e->getMessage());
-                    $this->info("请重新输入REDIS配置");
+                    // Connection failed, output error message
+                    $this->error("Redis connection failed: " . $e->getMessage());
+                    $this->info("Please re-enter Redis configuration");
                     $enableRedis = false;
                     sleep(1);
                 }
             }
 
             if (!copy(base_path() . '/.env.example', base_path() . '/.env')) {
-                abort(500, '复制环境文件失败，请检查目录权限');
+                abort(500, 'Failed to copy environment file, please check directory permissions');
             }
             ;
             $email = !empty($adminAccount) ? $adminAccount : text(
-                label: '请输入管理员账号',
+                label: 'Please enter admin account',
                 default: 'admin@demo.com',
                 required: true,
                 validate: fn(string $email): ?string => match (true) {
-                    !filter_var($email, FILTER_VALIDATE_EMAIL) => '请输入有效的邮箱地址.',
+                    !filter_var($email, FILTER_VALIDATE_EMAIL) => 'Please enter a valid email address.',
                     default => null,
                 }
             );
@@ -152,27 +154,27 @@ class XboardInstall extends Command
 
             $this->call('config:cache');
             Artisan::call('cache:clear');
-            $this->info('正在导入数据库请稍等...');
+            $this->info('Importing database, please wait...');
             Artisan::call("migrate", ['--force' => true]);
             $this->info(Artisan::output());
-            $this->info('数据库导入完成');
-            $this->info('开始注册管理员账号');
+            $this->info('Database import completed');
+            $this->info('Registering admin account');
             if (!self::registerAdmin($email, $password)) {
-                abort(500, '管理员账号注册失败，请重试');
+                abort(500, 'Admin account registration failed, please try again');
             }
             if (function_exists('exec')) {
                 self::restoreProtectedPlugins($this);
             }
-            $this->info('正在安装默认插件...');
+            $this->info('Installing default plugins...');
             PluginManager::installDefaultPlugins();
-            $this->info('默认插件安装完成');
+            $this->info('Default plugins installation completed');
 
-            $this->info('🎉：一切就绪');
-            $this->info("管理员邮箱：{$email}");
-            $this->info("管理员密码：{$password}");
+            $this->info('🎉: Everything is ready');
+            $this->info("Admin email: {$email}");
+            $this->info("Admin password: {$password}");
 
             $defaultSecurePath = hash('crc32b', config('app.key'));
-            $this->info("访问 http(s)://你的站点/{$defaultSecurePath} 进入管理面板，你可以在用户中心修改你的密码。");
+            $this->info("Access http(s)://your-site/{$defaultSecurePath} to enter the admin panel. You can change your password in the user center.");
             $envConfig['INSTALLED'] = true;
             $this->saveToEnv($envConfig);
         } catch (\Exception $e) {
@@ -185,7 +187,7 @@ class XboardInstall extends Command
         $user = new User();
         $user->email = $email;
         if (strlen($password) < 8) {
-            abort(500, '管理员密码长度最小为8位字符');
+            abort(500, 'Admin password must be at least 8 characters long');
         }
         $user->password = password_hash($password, PASSWORD_DEFAULT);
         $user->uuid = Helper::guid(true);
@@ -228,7 +230,7 @@ class XboardInstall extends Command
     }
 
     /**
-     * 配置 SQLite 数据库
+     * Configure SQLite database
      *
      * @return array|null
      */
@@ -236,9 +238,9 @@ class XboardInstall extends Command
     {
         $sqliteFile = '.docker/.data/database.sqlite';
         if (!file_exists(base_path($sqliteFile))) {
-            // 创建空文件
+            // Create empty file
             if (!touch(base_path($sqliteFile))) {
-                $this->info("sqlite创建成功: $sqliteFile");
+                $this->info("SQLite created successfully: $sqliteFile");
             }
         }
 
@@ -257,16 +259,16 @@ class XboardInstall extends Command
             DB::connection('sqlite')->getPdo();
 
             if (!blank(DB::connection('sqlite')->getPdo()->query("SELECT name FROM sqlite_master WHERE type='table'")->fetchAll(\PDO::FETCH_COLUMN))) {
-                if (confirm(label: '检测到数据库中已经存在数据，是否要清空数据库以便安装新的数据？', default: false, yes: '清空', no: '退出安装')) {
-                    $this->info('正在清空数据库请稍等');
+                if (confirm(label: 'Data detected in database. Do you want to clear the database to install new data?', default: false, yes: 'Clear', no: 'Exit installation')) {
+                    $this->info('Clearing database, please wait');
                     $this->call('db:wipe', ['--force' => true]);
-                    $this->info('数据库清空完成');
+                    $this->info('Database cleared');
                 } else {
                     return null;
                 }
             }
         } catch (\Exception $e) {
-            $this->error("SQLite数据库连接失败：" . $e->getMessage());
+            $this->error("SQLite database connection failed: " . $e->getMessage());
             return null;
         }
 
@@ -274,7 +276,7 @@ class XboardInstall extends Command
     }
 
     /**
-     * 配置 MySQL 数据库
+     * Configure MySQL database
      *
      * @return array
      */
@@ -283,11 +285,11 @@ class XboardInstall extends Command
         while (true) {
             $envConfig = [
                 'DB_CONNECTION' => 'mysql',
-                'DB_HOST' => text(label: "请输入MySQL数据库地址", default: '127.0.0.1', required: true),
-                'DB_PORT' => text(label: '请输入MySQL数据库端口', default: '3306', required: true),
-                'DB_DATABASE' => text(label: '请输入MySQL数据库名', default: 'xboard', required: true),
-                'DB_USERNAME' => text(label: '请输入MySQL数据库用户名', default: 'root', required: true),
-                'DB_PASSWORD' => text(label: '请输入MySQL数据库密码', required: false),
+                'DB_HOST' => text(label: "Please enter MySQL database address", default: '127.0.0.1', required: true),
+                'DB_PORT' => text(label: 'Please enter MySQL database port', default: '3306', required: true),
+                'DB_DATABASE' => text(label: 'Please enter MySQL database name', default: 'bypax', required: true),
+                'DB_USERNAME' => text(label: 'Please enter MySQL database username', default: 'root', required: true),
+                'DB_PASSWORD' => text(label: 'Please enter MySQL database password', required: false),
             ];
 
             try {
@@ -301,26 +303,26 @@ class XboardInstall extends Command
                 DB::connection('mysql')->getPdo();
 
                 if (!blank(DB::connection('mysql')->select('SHOW TABLES'))) {
-                    if (confirm(label: '检测到数据库中已经存在数据，是否要清空数据库以便安装新的数据？', default: false, yes: '清空', no: '不清空')) {
-                        $this->info('正在清空数据库请稍等');
+                    if (confirm(label: 'Data detected in database. Do you want to clear the database to install new data?', default: false, yes: 'Clear', no: 'Keep')) {
+                        $this->info('Clearing database, please wait');
                         $this->call('db:wipe', ['--force' => true]);
-                        $this->info('数据库清空完成');
+                        $this->info('Database cleared');
                         return $envConfig;
                     } else {
-                        continue; // 重新输入配置
+                        continue; // Re-enter configuration
                     }
                 }
 
                 return $envConfig;
             } catch (\Exception $e) {
-                $this->error("MySQL数据库连接失败：" . $e->getMessage());
-                $this->info("请重新输入MySQL数据库配置");
+                $this->error("MySQL database connection failed: " . $e->getMessage());
+                $this->info("Please re-enter MySQL database configuration");
             }
         }
     }
 
     /**
-     * 配置 PostgreSQL 数据库
+     * Configure PostgreSQL database
      *
      * @return array
      */
@@ -329,11 +331,11 @@ class XboardInstall extends Command
         while (true) {
             $envConfig = [
                 'DB_CONNECTION' => 'pgsql',
-                'DB_HOST' => text(label: "请输入PostgreSQL数据库地址", default: '127.0.0.1', required: true),
-                'DB_PORT' => text(label: '请输入PostgreSQL数据库端口', default: '5432', required: true),
-                'DB_DATABASE' => text(label: '请输入PostgreSQL数据库名', default: 'xboard', required: true),
-                'DB_USERNAME' => text(label: '请输入PostgreSQL数据库用户名', default: 'postgres', required: true),
-                'DB_PASSWORD' => text(label: '请输入PostgreSQL数据库密码', required: false),
+                'DB_HOST' => text(label: "Please enter PostgreSQL database address", default: '127.0.0.1', required: true),
+                'DB_PORT' => text(label: 'Please enter PostgreSQL database port', default: '5432', required: true),
+                'DB_DATABASE' => text(label: 'Please enter PostgreSQL database name', default: 'bypax', required: true),
+                'DB_USERNAME' => text(label: 'Please enter PostgreSQL database username', default: 'postgres', required: true),
+                'DB_PASSWORD' => text(label: 'Please enter PostgreSQL database password', required: false),
             ];
 
             try {
@@ -346,29 +348,29 @@ class XboardInstall extends Command
                 DB::purge('pgsql');
                 DB::connection('pgsql')->getPdo();
 
-                // 检查PostgreSQL数据库是否有表
+                // Check if PostgreSQL database has tables
                 $tables = DB::connection('pgsql')->select("SELECT tablename FROM pg_tables WHERE schemaname = 'public'");
                 if (!blank($tables)) {
-                    if (confirm(label: '检测到数据库中已经存在数据，是否要清空数据库以便安装新的数据？', default: false, yes: '清空', no: '不清空')) {
-                        $this->info('正在清空数据库请稍等');
+                    if (confirm(label: 'Data detected in database. Do you want to clear the database to install new data?', default: false, yes: 'Clear', no: 'Keep')) {
+                        $this->info('Clearing database, please wait');
                         $this->call('db:wipe', ['--force' => true]);
-                        $this->info('数据库清空完成');
+                        $this->info('Database cleared');
                         return $envConfig;
                     } else {
-                        continue; // 重新输入配置
+                        continue; // Re-enter configuration
                     }
                 }
 
                 return $envConfig;
             } catch (\Exception $e) {
-                $this->error("PostgreSQL数据库连接失败：" . $e->getMessage());
-                $this->info("请重新输入PostgreSQL数据库配置");
+                $this->error("PostgreSQL database connection failed: " . $e->getMessage());
+                $this->info("Please re-enter PostgreSQL database configuration");
             }
         }
     }
 
     /**
-     * 还原内置受保护插件（可在安装和更新时调用）
+     * Restore built-in protected plugins (can be called during installation and update)
      */
     public static function restoreProtectedPlugins(Command $console = null)
     {
@@ -386,7 +388,7 @@ class XboardInstall extends Command
             }
             if ($hasNonNewFiles) {
                 if ($console)
-                    $console->info("检测到 plugins 目录有变更，正在还原...");
+                    $console->info("Changes detected in plugins directory, restoring...");
 
                 foreach ($output as $line) {
                     $status = trim(substr($line, 0, 2));
@@ -396,13 +398,13 @@ class XboardInstall extends Command
                         $relativePath = substr($filePath, 8);
                         if ($console) {
                             $action = match ($status) {
-                                'M' => '修改',
-                                'D' => '删除',
-                                'R' => '重命名',
-                                'C' => '复制',
-                                default => '变更'
+                                'M' => 'Modified',
+                                'D' => 'Deleted',
+                                'R' => 'Renamed',
+                                'C' => 'Copied',
+                                default => 'Changed'
                             };
-                            $console->info("还原插件文件 [{$relativePath}] ({$action})");
+                            $console->info("Restoring plugin file [{$relativePath}] ({$action})");
                         }
 
                         $cmd = "git checkout HEAD -- {$filePath}";
@@ -410,20 +412,21 @@ class XboardInstall extends Command
 
                         if ($gitReturnVar === 0) {
                             if ($console)
-                                $console->info("插件文件 [{$relativePath}] 已还原。");
+                                $console->info("Plugin file [{$relativePath}] restored.");
                         } else {
                             if ($console)
-                                $console->error("插件文件 [{$relativePath}] 还原失败。");
+                                $console->error("Plugin file [{$relativePath}] restore failed.");
                         }
                     }
                 }
             } else {
                 if ($console)
-                    $console->info("plugins 目录状态正常，无需还原。");
+                    $console->info("Plugins directory status is normal, no restore needed.");
             }
         } else {
             if ($console)
-                $console->info("plugins 目录状态正常，无需还原。");
+                $console->info("Plugins directory status is normal, no restore needed.");
         }
     }
 }
+

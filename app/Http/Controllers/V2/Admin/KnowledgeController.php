@@ -37,14 +37,14 @@ class KnowledgeController extends Controller
 
         if (!$request->input('id')) {
             if (!Knowledge::create($params)) {
-                return $this->fail([500, '创建失败']);
+                return $this->fail([500, 'Creation failed']);
             }
         } else {
             try {
                 Knowledge::find($request->input('id'))->update($params);
             } catch (\Exception $e) {
                 \Log::error($e);
-                return $this->fail([500, '创建失败']);
+                return $this->fail([500, 'Creation failed']);
             }
         }
 
@@ -64,7 +64,7 @@ class KnowledgeController extends Controller
         }
         $knowledge->show = !$knowledge->show;
         if (!$knowledge->save()) {
-            throw new ApiException('保存失败');
+            throw new ApiException('Save failed');
         }
 
         return $this->success(true);
@@ -88,7 +88,7 @@ class KnowledgeController extends Controller
             DB::commit();
         } catch (\Exception $e) {
             DB::rollBack();
-            throw new ApiException('保存失败');
+            throw new ApiException('Save failed');
         }
         return $this->success(true);
     }
@@ -105,7 +105,7 @@ class KnowledgeController extends Controller
             return $this->fail([400202, '知识不存在']);
         }
         if (!$knowledge->delete()) {
-            return $this->fail([500, '删除失败']);
+            return $this->fail([500, 'Deletion failed']);
         }
 
         return $this->success(true);

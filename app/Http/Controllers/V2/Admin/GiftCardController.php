@@ -125,7 +125,7 @@ class GiftCardController extends Controller
                 'data' => $request->all(),
                 'error' => $e->getMessage(),
             ]);
-            return $this->fail([500, '创建失败']);
+            return $this->fail([500, 'Creation failed']);
         }
     }
 
@@ -178,7 +178,7 @@ class GiftCardController extends Controller
                 'template_id' => $template->id,
                 'error' => $e->getMessage(),
             ]);
-            return $this->fail([500, '更新失败']);
+            return $this->fail([500, 'Update failed']);
         }
     }
 
@@ -210,7 +210,7 @@ class GiftCardController extends Controller
                 'template_id' => $template->id,
                 'error' => $e->getMessage(),
             ]);
-            return $this->fail([500, '删除失败']);
+            return $this->fail([500, 'Deletion failed']);
         }
     }
 
@@ -415,7 +415,7 @@ class GiftCardController extends Controller
                 'message' => $request->input('action') === 'disable' ? '已禁用' : '已启用',
             ]);
         } catch (\Exception $e) {
-            return $this->fail([500, '操作失败']);
+            return $this->fail([500, 'Operation failed']);
         }
     }
 
@@ -579,7 +579,7 @@ class GiftCardController extends Controller
                 'code_id' => $code->id,
                 'error' => $e->getMessage(),
             ]);
-            return $this->fail([500, '更新失败']);
+            return $this->fail([500, 'Update failed']);
         }
     }
 
@@ -616,7 +616,7 @@ class GiftCardController extends Controller
                 'code_id' => $code->id,
                 'error' => $e->getMessage(),
             ]);
-            return $this->fail([500, '删除失败']);
+            return $this->fail([500, 'Deletion failed']);
         }
     }
 }

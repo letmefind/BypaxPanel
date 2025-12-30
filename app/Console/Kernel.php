@@ -29,8 +29,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         Cache::put(CacheKey::get('SCHEDULE_LAST_CHECK_AT', null), time());
-        // v2board
-        $schedule->command('xboard:statistics')->dailyAt('0:10')->onOneServer();
+        // Bypax Panel
+        $schedule->command('bypax:statistics')->dailyAt('0:10')->onOneServer();
         // check
         $schedule->command('check:order')->everyMinute()->onOneServer();
         $schedule->command('check:commission')->everyMinute()->onOneServer();
