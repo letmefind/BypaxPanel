@@ -21,7 +21,7 @@ Bypax Panel is a modern panel system built on Laravel 11, focusing on providing 
 - 🎯 Optimized system architecture for better maintainability
 - 🌍 Multi-language support: English, Chinese, Korean, and Persian
 - 🔧 Simplified installation process with automated scripts
-- 🔐 **New Protocol Support**: OpenVPN, WireGuard, and IKE tunnel protocols
+- 🔐 **Comprehensive Protocol Support** (Planned): All VPN protocols from Xboard (including V2ray and others) plus OpenVPN, WireGuard, and IKE tunnel protocols - no other panel supports all these protocols together
 
 ## 🚀 Quick Start
 
@@ -127,7 +127,7 @@ Bypax Panel یک سیستم پنل مدرن است که بر روی Laravel 11 �
 - 🎯 معماری سیستم بهینه شده برای قابلیت نگهداری بهتر
 - 🌍 پشتیبانی چندزبانه: انگلیسی، چینی، کره‌ای و فارسی
 - 🔧 فرآیند نصب ساده شده با اسکریپت‌های خودکار
-- 🔐 **پشتیبانی پروتکل‌های جدید**: OpenVPN، WireGuard و پروتکل‌های تونل IKE
+- 🔐 **پشتیبانی جامع پروتکل‌ها** (در دست برنامه‌ریزی): تمام پروتکل‌های VPN از Xboard (شامل V2ray و سایرین) به علاوه OpenVPN، WireGuard و پروتکل‌های تونل IKE - هیچ پنل دیگری از تمام این پروتکل‌ها به طور همزمان پشتیبانی نمی‌کند
 
 ### 🚀 شروع سریع
 
