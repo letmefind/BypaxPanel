@@ -871,36 +871,36 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
     }
   },
   "group": {
-    "title": "Permission Groups",
-    "description": "Manage all permission groups, including adding, deleting, and editing operations.",
+    "title": "گروه‌های دسترسی",
+    "description": "مدیریت تمام گروه‌های دسترسی، شامل عملیات افزودن، حذف و ویرایش.",
     "columns": {
-      "id": "Group ID",
-      "name": "Group Name",
-      "usersCount": "Users Count",
-      "serverCount": "Nodes Count",
-      "actions": "Actions"
+      "id": "شناسه گروه",
+      "name": "نام گروه",
+      "usersCount": "تعداد کاربران",
+      "serverCount": "تعداد نودها",
+      "actions": "عملیات"
     },
     "form": {
-      "add": "Add Group",
-      "edit": "Edit Group",
-      "create": "Create Group",
-      "update": "Update",
-      "name": "Group Name",
-      "namePlaceholder": "Please enter group name",
-      "nameDescription": "Group name is used to identify different user groups, it's recommended to use meaningful names.",
-      "cancel": "Cancel",
-      "editDescription": "Modify group information, changes will take effect immediately.",
-      "createDescription": "Create a new permission group to assign different permissions to different users."
+      "add": "افزودن گروه",
+      "edit": "ویرایش گروه",
+      "create": "ایجاد گروه",
+      "update": "به‌روزرسانی",
+      "name": "نام گروه",
+      "namePlaceholder": "لطفاً نام گروه را وارد کنید",
+      "nameDescription": "نام گروه برای شناسایی گروه‌های مختلف کاربران استفاده می‌شود، توصیه می‌شود از نام‌های معنی‌دار استفاده کنید.",
+      "cancel": "لغو",
+      "editDescription": "تغییر اطلاعات گروه، تغییرات بلافاصله اعمال می‌شود.",
+      "createDescription": "ایجاد یک گروه دسترسی جدید برای اختصاص دسترسی‌های مختلف به کاربران مختلف."
     },
     "toolbar": {
-      "searchPlaceholder": "Search groups...",
-      "reset": "Reset"
+      "searchPlaceholder": "جستجوی گروه‌ها...",
+      "reset": "بازنشانی"
     },
     "messages": {
-      "deleteConfirm": "Confirm Delete",
-      "deleteDescription": "This action will permanently delete this permission group and cannot be recovered. Are you sure you want to continue?",
-      "deleteButton": "Delete",
-      "createSuccess": "Created Successfully",
+      "deleteConfirm": "تأیید حذف",
+      "deleteDescription": "این عمل به طور دائمی این گروه دسترسی را حذف می‌کند و قابل بازیابی نیست. آیا مطمئن هستید که می‌خواهید ادامه دهید؟",
+      "deleteButton": "حذف",
+      "createSuccess": "با موفقیت ایجاد شد",
       "updateSuccess": "Updated Successfully",
       "nameValidation": {
         "min": "Group name must be at least 2 characters",
@@ -1886,279 +1886,279 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
     }
   },
   "theme": {
-    "title": "Theme Configuration",
-    "description": "Theme configuration, including theme colors, font sizes, etc. If you deploy V2board in a front-end and back-end separated way, theme configuration will not take effect.",
+    "title": "پیکربندی تم",
+    "description": "پیکربندی تم، شامل رنگ‌های تم، اندازه فونت و غیره. اگر V2board را به صورت جداگانه فرانت‌اند و بک‌اند مستقر کنید، پیکربندی تم اعمال نخواهد شد.",
     "upload": {
-      "button": "Upload Theme",
-      "title": "Upload Theme",
-      "description": "Please upload a valid theme package (.zip format). The theme package should contain a complete theme file structure.",
-      "dragText": "Drag and drop theme file here, or",
-      "clickText": "click to select",
-      "supportText": "Supports .zip format theme packages",
-      "uploading": "Uploading...",
+      "button": "آپلود تم",
+      "title": "آپلود تم",
+      "description": "لطفاً یک بسته تم معتبر (.zip) آپلود کنید. بسته تم باید شامل ساختار کامل فایل تم باشد.",
+      "dragText": "فایل تم را اینجا بکشید و رها کنید، یا",
+      "clickText": "برای انتخاب کلیک کنید",
+      "supportText": "بسته‌های تم با فرمت .zip پشتیبانی می‌شود",
+      "uploading": "در حال آپلود...",
       "error": {
-        "format": "Only ZIP format theme files are supported"
+        "format": "فقط فایل‌های تم با فرمت ZIP پشتیبانی می‌شود"
       }
     },
     "preview": {
-      "title": "Theme Preview",
+      "title": "پیش‌نمایش تم",
       "imageCount": "{{current}} / {{total}}"
     },
     "card": {
-      "version": "Version: {{version}}",
-      "currentTheme": "Current Theme",
-      "activateTheme": "Activate Theme",
-      "configureTheme": "Theme Settings",
-      "preview": "Preview",
+      "version": "نسخه: {{version}}",
+      "currentTheme": "تم فعلی",
+      "activateTheme": "فعال کردن تم",
+      "configureTheme": "تنظیمات تم",
+      "preview": "پیش‌نمایش",
       "delete": {
-        "title": "Delete Theme",
-        "description": "Are you sure you want to delete this theme? This action cannot be undone.",
-        "button": "Delete",
+        "title": "حذف تم",
+        "description": "آیا مطمئن هستید که می‌خواهید این تم را حذف کنید؟ این عمل قابل بازگشت نیست.",
+        "button": "حذف",
         "error": {
-          "active": "Cannot delete the currently active theme"
+          "active": "نمی‌توان تم فعال فعلی را حذف کرد"
         }
       }
     },
     "config": {
-      "title": "Configure {{name}} Theme",
-      "description": "Modify theme styles, layouts, and other display options.",
-      "cancel": "Cancel",
-      "save": "Save",
-      "success": "Settings saved successfully"
+      "title": "پیکربندی تم {{name}}",
+      "description": "تغییر سبک‌ها، چیدمان‌ها و سایر گزینه‌های نمایش تم.",
+      "cancel": "لغو",
+      "save": "ذخیره",
+      "success": "تنظیمات با موفقیت ذخیره شد"
     }
   },
   "ticket": {
-    "title": "Ticket Management",
-    "description": "View and manage user tickets, including viewing, replying, and closing operations.",
+    "title": "مدیریت تیکت",
+    "description": "مشاهده و مدیریت تیکت‌های کاربران، شامل عملیات مشاهده، پاسخ و بستن.",
     "columns": {
-      "id": "Ticket ID",
-      "subject": "Subject",
-      "level": "Priority",
-      "status": "Status",
-      "updated_at": "Last Updated",
-      "created_at": "Created At",
-      "actions": "Actions"
+      "id": "شناسه تیکت",
+      "subject": "موضوع",
+      "level": "اولویت",
+      "status": "وضعیت",
+      "updated_at": "آخرین به‌روزرسانی",
+      "created_at": "ایجاد شده در",
+      "actions": "عملیات"
     },
     "status": {
-      "closed": "Closed",
-      "replied": "Replied",
-      "pending": "Pending",
-      "processing": "Processing"
+      "closed": "بسته شده",
+      "replied": "پاسخ داده شده",
+      "pending": "در انتظار",
+      "processing": "در حال پردازش"
     },
     "level": {
-      "low": "Low Priority",
-      "medium": "Medium Priority",
-      "high": "High Priority"
+      "low": "اولویت پایین",
+      "medium": "اولویت متوسط",
+      "high": "اولویت بالا"
     },
     "filter": {
-      "placeholder": "Search {field}...",
-      "no_results": "No results found",
-      "selected": "{count} selected",
-      "clear": "Clear filters"
+      "placeholder": "جستجوی {field}...",
+      "no_results": "نتیجه‌ای یافت نشد",
+      "selected": "{count} مورد انتخاب شده",
+      "clear": "پاک کردن فیلترها"
     },
     "actions": {
-      "view_details": "View Details",
-      "close_ticket": "Close Ticket",
-      "close_confirm_title": "Confirm Close Ticket",
-      "close_confirm_description": "Are you sure you want to close this ticket? You won't be able to reply after closing.",
-      "close_confirm_button": "Confirm Close",
-      "close_success": "Ticket closed successfully",
-      "view_ticket": "View Ticket"
+      "view_details": "مشاهده جزئیات",
+      "close_ticket": "بستن تیکت",
+      "close_confirm_title": "تأیید بستن تیکت",
+      "close_confirm_description": "آیا مطمئن هستید که می‌خواهید این تیکت را ببندید؟ پس از بستن نمی‌توانید پاسخ دهید.",
+      "close_confirm_button": "تأیید بستن",
+      "close_success": "تیکت با موفقیت بسته شد",
+      "view_ticket": "مشاهده تیکت"
     },
     "detail": {
-      "no_messages": "No messages yet",
-      "created_at": "Created at",
-      "user_info": "User Info",
-      "traffic_records": "Traffic Records",
-      "order_records": "Order Records",
+      "no_messages": "هنوز پیامی وجود ندارد",
+      "created_at": "ایجاد شده در",
+      "user_info": "اطلاعات کاربر",
+      "traffic_records": "سوابق ترافیک",
+      "order_records": "سوابق سفارش",
       "input": {
-        "closed_placeholder": "Ticket is closed",
-        "reply_placeholder": "Type your reply...",
-        "sending": "Sending...",
-        "send": "Send"
+        "closed_placeholder": "تیکت بسته شده است",
+        "reply_placeholder": "پاسخ خود را تایپ کنید...",
+        "sending": "در حال ارسال...",
+        "send": "ارسال"
       }
     },
     "list": {
-      "title": "Ticket List",
-      "search_placeholder": "Search ticket subject or user email",
-      "no_tickets": "No pending tickets",
-      "no_search_results": "No matching tickets found"
+      "title": "فهرست تیکت‌ها",
+      "search_placeholder": "جستجوی موضوع تیکت یا ایمیل کاربر",
+      "no_tickets": "تیکت در انتظاری وجود ندارد",
+      "no_search_results": "تیکت مطابقی یافت نشد"
     }
   },
   "server": {
-    "title": "Node Configuration",
-    "description": "Configure node communication and synchronization settings, including communication key, polling interval, load balancing and other advanced options.",
+    "title": "پیکربندی نود",
+    "description": "پیکربندی تنظیمات ارتباط و همگام‌سازی نودها، شامل کلید ارتباطی، فواصل نظرسنجی، تعادل بار و سایر گزینه‌های پیشرفته.",
     "server_token": {
-      "title": "Communication Key",
+      "title": "کلید ارتباطی",
       "description": "کلید ارتباط بین Bypax Panel و نودها برای جلوگیری از دسترسی غیرمجاز به داده‌ها.",
-      "placeholder": "Please enter communication key"
+      "placeholder": "لطفاً کلید ارتباطی را وارد کنید"
     },
     "server_pull_interval": {
-      "title": "Node Pull Action Polling Interval",
-      "description": "The frequency at which nodes retrieve data from the panel.",
-      "placeholder": "Please enter pull interval"
+      "title": "فاصله نظرسنجی عملیات Pull نود",
+      "description": "فرکانسی که نودها داده‌ها را از پنل دریافت می‌کنند.",
+      "placeholder": "لطفاً فاصله pull را وارد کنید"
     },
     "server_push_interval": {
-      "title": "Node Push Action Polling Interval",
-      "description": "The frequency at which nodes push data to the panel.",
-      "placeholder": "Please enter push interval"
+      "title": "فاصله نظرسنجی عملیات Push نود",
+      "description": "فرکانسی که نودها داده‌ها را به پنل ارسال می‌کنند.",
+      "placeholder": "لطفاً فاصله push را وارد کنید"
     },
     "device_limit_mode": {
-      "title": "Device Limit Mode",
-      "description": "In relaxed mode, multiple nodes from the same IP address count as one device.",
-      "strict": "Strict Mode",
-      "relaxed": "Relaxed Mode",
-      "placeholder": "Please select device limit mode"
+      "title": "حالت محدودیت دستگاه",
+      "description": "در حالت آسان‌گیر، استفاده از چندین نود از یک آدرس IP به عنوان یک دستگاه محاسبه می‌شود.",
+      "strict": "حالت سخت‌گیر",
+      "relaxed": "حالت آسان‌گیر",
+      "placeholder": "لطفاً حالت محدودیت دستگاه را انتخاب کنید"
     },
-    "saving": "Saving...",
+    "saving": "در حال ذخیره...",
     "manage": {
-      "title": "Node Management",
-      "description": "Manage all nodes, including adding, deleting, editing and other operations."
+      "title": "مدیریت نود",
+      "description": "مدیریت تمام نودها، شامل افزودن، حذف، ویرایش و سایر عملیات."
     },
     "columns": {
-      "sort": "Sort",
-      "nodeId": "Node ID",
-      "show": "Show",
-      "node": "Node",
-      "address": "Address",
+      "sort": "ترتیب",
+      "nodeId": "شناسه نود",
+      "show": "نمایش",
+      "node": "نود",
+      "address": "آدرس",
       "onlineUsers": {
-        "title": "Online Users",
-        "tooltip": "Online users count based on server reporting frequency"
+        "title": "کاربران آنلاین",
+        "tooltip": "تعداد کاربران آنلاین بر اساس فرکانس گزارش‌دهی سرور"
       },
       "rate": {
-        "title": "Rate",
-        "tooltip": "Traffic billing rate"
+        "title": "نرخ",
+        "tooltip": "نرخ صورتحساب ترافیک"
       },
       "groups": {
-        "title": "Permission Groups",
-        "tooltip": "Groups that can subscribe to this node",
+        "title": "گروه‌های دسترسی",
+        "tooltip": "گروه‌هایی که می‌توانند به این نود اشتراک داشته باشند",
         "empty": "--"
       },
       "loadStatus": {
-        "title": "Load Status",
-        "tooltip": "Server resource usage",
-        "noData": "No Data",
-        "details": "System Load Details",
-        "cpu": "CPU Usage",
-        "memory": "Memory Usage",
-        "swap": "Swap Usage",
-        "disk": "Disk Usage",
-        "lastUpdate": "Last Updated"
+        "title": "وضعیت بار",
+        "tooltip": "استفاده از منابع سرور",
+        "noData": "داده‌ای وجود ندارد",
+        "details": "جزئیات بار سیستم",
+        "cpu": "استفاده از CPU",
+        "memory": "استفاده از حافظه",
+        "swap": "استفاده از Swap",
+        "disk": "استفاده از دیسک",
+        "lastUpdate": "آخرین به‌روزرسانی"
       },
-      "customId": "Custom ID",
-      "originalId": "Original ID",
-      "type": "Type",
-      "actions": "Actions",
-      "copyAddress": "Copy Connection Address",
-      "internalPort": "Internal Port",
+      "customId": "شناسه سفارشی",
+      "originalId": "شناسه اصلی",
+      "type": "نوع",
+      "actions": "عملیات",
+      "copyAddress": "کپی آدرس اتصال",
+      "internalPort": "پورت داخلی",
       "status": {
-        "0": "Not Running",
-        "1": "Unused or Abnormal",
-        "2": "Running Normal"
+        "0": "در حال اجرا نیست",
+        "1": "استفاده نشده یا غیرعادی",
+        "2": "در حال اجرا عادی"
       },
       "actions_dropdown": {
-        "edit": "Edit",
-        "copy": "Copy",
+        "edit": "ویرایش",
+        "copy": "کپی",
         "delete": {
-          "title": "Confirm Delete",
-          "description": "This action will permanently delete this node and cannot be undone. Are you sure you want to continue?",
-          "confirm": "Delete"
+          "title": "تأیید حذف",
+          "description": "این عمل به طور دائمی این نود را حذف می‌کند و قابل بازگشت نیست. آیا مطمئن هستید که می‌خواهید ادامه دهید؟",
+          "confirm": "حذف"
         },
-        "copy_success": "Copied successfully",
-        "delete_success": "Deleted successfully"
+        "copy_success": "با موفقیت کپی شد",
+        "delete_success": "با موفقیت حذف شد"
       }
     },
     "toolbar": {
-      "search": "Search nodes...",
-      "type": "Type",
-      "reset": "Reset",
+      "search": "جستجوی نودها...",
+      "type": "نوع",
+      "reset": "بازنشانی",
       "sort": {
-        "tip": "Drag nodes to sort, then click save",
-        "edit": "Edit Sort",
-        "save": "Save Sort"
+        "tip": "نودها را بکشید تا مرتب شوند، سپس روی ذخیره کلیک کنید",
+        "edit": "ویرایش ترتیب",
+        "save": "ذخیره ترتیب"
       }
     },
     "form": {
-      "add_node": "Add Node",
-      "edit_node": "Edit Node",
-      "new_node": "New Node",
+      "add_node": "افزودن نود",
+      "edit_node": "ویرایش نود",
+      "new_node": "نود جدید",
       "name": {
-        "label": "Node Name",
-        "placeholder": "Please enter node name",
-        "error": "Please enter a valid name"
+        "label": "نام نود",
+        "placeholder": "لطفاً نام نود را وارد کنید",
+        "error": "لطفاً یک نام معتبر وارد کنید"
       },
       "rate": {
-        "label": "Base Rate",
-        "error": "Base rate is required",
-        "error_numeric": "Base rate must be a number",
-        "error_gte_zero": "Base rate must be greater than or equal to 0",
-        "child_node_tooltip": "Child node's base rate is inherited from parent node and cannot be set separately",
-        "child_node_note": "Child node rate inherited from parent"
+        "label": "نرخ پایه",
+        "error": "نرخ پایه الزامی است",
+        "error_numeric": "نرخ پایه باید یک عدد باشد",
+        "error_gte_zero": "نرخ پایه باید بزرگتر یا مساوی 0 باشد",
+        "child_node_tooltip": "نرخ پایه نود فرزند از نود والد به ارث می‌رسد و نمی‌تواند به طور جداگانه تنظیم شود",
+        "child_node_note": "نرخ نود فرزند از والد به ارث می‌رسد"
       },
       "dynamic_rate": {
-        "section_title": "Dynamic Rate Configuration",
-        "enable_label": "Enable Dynamic Rate",
-        "enable_description": "Set different rate multipliers based on time periods",
-        "rules_label": "Time Period Rules",
-        "add_rule": "Add Rule",
-        "rule_title": "Rule {{index}}",
-        "start_time": "Start Time",
-        "end_time": "End Time",
-        "multiplier": "Rate Multiplier",
-        "no_rules": "No rules yet, click the button above to add",
-        "start_time_error": "Start time is required",
-        "end_time_error": "End time is required",
-        "multiplier_error": "Rate multiplier is required",
-        "multiplier_error_numeric": "Rate multiplier must be a number",
-        "multiplier_error_gte_zero": "Rate multiplier must be greater than or equal to 0"
+        "section_title": "پیکربندی نرخ پویا",
+        "enable_label": "فعال کردن نرخ پویا",
+        "enable_description": "تنظیم ضریب‌های نرخ مختلف بر اساس دوره‌های زمانی",
+        "rules_label": "قوانین دوره زمانی",
+        "add_rule": "افزودن قانون",
+        "rule_title": "قانون {{index}}",
+        "start_time": "زمان شروع",
+        "end_time": "زمان پایان",
+        "multiplier": "ضریب نرخ",
+        "no_rules": "هنوز قانونی وجود ندارد، روی دکمه بالا کلیک کنید تا اضافه کنید",
+        "start_time_error": "زمان شروع الزامی است",
+        "end_time_error": "زمان پایان الزامی است",
+        "multiplier_error": "ضریب نرخ الزامی است",
+        "multiplier_error_numeric": "ضریب نرخ باید یک عدد باشد",
+        "multiplier_error_gte_zero": "ضریب نرخ باید بزرگتر یا مساوی 0 باشد"
       },
       "code": {
-        "label": "Custom Node ID",
-        "optional": "(Optional)",
-        "placeholder": "Please enter custom node ID"
+        "label": "شناسه نود سفارشی",
+        "optional": "(اختیاری)",
+        "placeholder": "لطفاً شناسه نود سفارشی را وارد کنید"
       },
       "tags": {
-        "label": "Node Tags",
-        "placeholder": "Press Enter to add tags"
+        "label": "برچسب‌های نود",
+        "placeholder": "برای افزودن برچسب Enter را فشار دهید"
       },
       "groups": {
-        "label": "Permission Groups",
-        "add": "Add Group",
-        "placeholder": "Please select permission groups",
-        "empty": "No results found"
+        "label": "گروه‌های دسترسی",
+        "add": "افزودن گروه",
+        "placeholder": "لطفاً گروه‌های دسترسی را انتخاب کنید",
+        "empty": "نتیجه‌ای یافت نشد"
       },
       "host": {
-        "label": "Node Address",
-        "placeholder": "Please enter domain or IP",
-        "error": "Node address is required"
+        "label": "آدرس نود",
+        "placeholder": "لطفاً دامنه یا IP را وارد کنید",
+        "error": "آدرس نود الزامی است"
       },
       "port": {
-        "label": "Connection Port",
-        "placeholder": "User connection port",
-        "tooltip": "The port that users actually connect to, this is the port number that needs to be filled in the client configuration. If using transit or tunnel, this port may be different from the port that the server actually listens on.",
-        "sync": "Sync to server port",
-        "error": "Connection port is required"
+        "label": "پورت اتصال",
+        "placeholder": "پورت اتصال کاربر",
+        "tooltip": "پورتی که کاربران در واقع به آن متصل می‌شوند، این شماره پورتی است که باید در پیکربندی کلاینت پر شود. اگر از ترانزیت یا تونل استفاده می‌کنید، این پورت ممکن است با پورتی که سرور در واقع به آن گوش می‌دهد متفاوت باشد.",
+        "sync": "همگام‌سازی با پورت سرور",
+        "error": "پورت اتصال الزامی است"
       },
       "server_port": {
-        "label": "Server Port",
-        "placeholder": "Enter server port",
-        "error": "Server port is required",
-        "tooltip": "The actual listening port on the server.",
-        "sync": "Sync to server port"
+        "label": "پورت سرور",
+        "placeholder": "پورت سرور را وارد کنید",
+        "error": "پورت سرور الزامی است",
+        "tooltip": "پورت گوش دادن واقعی در سرور.",
+        "sync": "همگام‌سازی با پورت سرور"
       },
       "parent": {
-        "label": "Parent Node",
-        "placeholder": "Select parent node",
-        "none": "None"
+        "label": "نود والد",
+        "placeholder": "نود والد را انتخاب کنید",
+        "none": "هیچکدام"
       },
       "route": {
-        "label": "Route Groups",
-        "placeholder": "Select route groups",
-        "empty": "No results found"
+        "label": "گروه‌های مسیر",
+        "placeholder": "گروه‌های مسیر را انتخاب کنید",
+        "empty": "نتیجه‌ای یافت نشد"
       },
-      "submit": "Submit",
-      "cancel": "Cancel",
-      "success": "Submitted successfully"
+      "submit": "ثبت",
+      "cancel": "لغو",
+      "success": "با موفقیت ثبت شد"
     },
     "dynamic_form": {
       "shadowsocks": {
@@ -2457,143 +2457,143 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
   },
   "user": {
     "manage": {
-      "title": "User Management",
-      "description": "Here you can manage users, including adding, deleting, editing, and querying operations."
+      "title": "مدیریت کاربران",
+      "description": "در اینجا می‌توانید کاربران را مدیریت کنید، شامل عملیات افزودن، حذف، ویرایش و جستجو."
     },
     "columns": {
-      "is_admin": "Admin",
-      "is_staff": "Staff",
-      "id": "ID",
-      "email": "Email",
-      "online_count": "Online Devices",
-      "status": "Status",
-      "subscription": "Subscription",
-      "group": "Group",
-      "used_traffic": "Used Traffic",
-      "total_traffic": "Total Traffic",
-      "expire_time": "Expire Time",
-      "balance": "Balance",
-      "commission": "Commission",
-      "register_time": "Register Time",
-      "actions": "Actions",
-      "next_reset_at": "Next Reset At",
+      "is_admin": "مدیر",
+      "is_staff": "کارمند",
+      "id": "شناسه",
+      "email": "ایمیل",
+      "online_count": "دستگاه‌های آنلاین",
+      "status": "وضعیت",
+      "subscription": "اشتراک",
+      "group": "گروه",
+      "used_traffic": "ترافیک استفاده شده",
+      "total_traffic": "ترافیک کل",
+      "expire_time": "زمان انقضا",
+      "balance": "موجودی",
+      "commission": "کمیسیون",
+      "register_time": "زمان ثبت‌نام",
+      "actions": "عملیات",
+      "next_reset_at": "بازنشانی بعدی در",
       "device_limit": {
-        "unlimited": "No device limit",
-        "limited": "Maximum {{count}} devices allowed"
+        "unlimited": "بدون محدودیت دستگاه",
+        "limited": "حداکثر {{count}} دستگاه مجاز است"
       },
       "status_text": {
-        "normal": "Normal",
-        "banned": "Banned"
+        "normal": "عادی",
+        "banned": "مسدود شده"
       },
       "online_status": {
-        "online": "Currently Online",
-        "never": "Never Online",
-        "last_online": "Last Online: {{time}}",
+        "online": "در حال حاضر آنلاین",
+        "never": "هرگز آنلاین نبوده",
+        "last_online": "آخرین آنلاین: {{time}}",
         "offline_duration": {
-          "days": "Offline Duration: {{count}}d",
-          "hours": "Offline Duration: {{count}}h",
-          "minutes": "Offline Duration: {{count}}m",
-          "seconds": "Offline Duration: {{count}}s"
+          "days": "مدت زمان آفلاین: {{count}} روز",
+          "hours": "مدت زمان آفلاین: {{count}} ساعت",
+          "minutes": "مدت زمان آفلاین: {{count}} دقیقه",
+          "seconds": "مدت زمان آفلاین: {{count}} ثانیه"
         }
       },
       "expire_status": {
-        "permanent": "Permanent",
-        "expired": "Expired {{days}} days ago",
-        "remaining": "{{days}} days remaining"
+        "permanent": "دائمی",
+        "expired": "{{days}} روز پیش منقضی شده",
+        "remaining": "{{days}} روز باقی مانده"
       },
       "actions_menu": {
-        "edit": "Edit",
-        "view_details": "View Details",
-        "assign_order": "Assign Order",
-        "copy_url": "Copy Subscribe URL",
-        "reset_secret": "Reset UUID & URL",
-        "orders": "Orders",
-        "invites": "Invites",
-        "traffic_records": "Traffic Records",
-        "reset_traffic": "Reset Traffic",
-        "delete": "Delete",
-        "delete_confirm_title": "Confirm Delete User",
-        "delete_confirm_description": "This action will permanently delete user {{email}} and all associated data, including orders, coupons, traffic records, and support tickets. This action cannot be undone. Do you want to continue?"
+        "edit": "ویرایش",
+        "view_details": "مشاهده جزئیات",
+        "assign_order": "اختصاص سفارش",
+        "copy_url": "کپی URL اشتراک",
+        "reset_secret": "بازنشانی UUID و URL",
+        "orders": "سفارشات",
+        "invites": "دعوت‌ها",
+        "traffic_records": "سوابق ترافیک",
+        "reset_traffic": "بازنشانی ترافیک",
+        "delete": "حذف",
+        "delete_confirm_title": "تأیید حذف کاربر",
+        "delete_confirm_description": "این عمل به طور دائمی کاربر {{email}} و تمام داده‌های مرتبط، شامل سفارشات، کوپن‌ها، سوابق ترافیک و تیکت‌های پشتیبانی را حذف می‌کند. این عمل قابل بازگشت نیست. آیا می‌خواهید ادامه دهید؟"
       }
     },
     "filter": {
-      "selected": "{{count}} selected",
-      "no_results": "No results found.",
-      "clear": "Clear filters",
-      "search_placeholder": "Search...",
-      "email_search": "Search user email...",
-      "advanced": "Advanced Filter",
-      "reset": "Reset Filter",
+      "selected": "{{count}} مورد انتخاب شده",
+      "no_results": "نتیجه‌ای یافت نشد.",
+      "clear": "پاک کردن فیلترها",
+      "search_placeholder": "جستجو...",
+      "email_search": "جستجوی ایمیل کاربر...",
+      "advanced": "فیلتر پیشرفته",
+      "reset": "بازنشانی فیلتر",
       "sheet": {
-        "title": "Advanced Filter",
-        "description": "Add one or more filter conditions to find users precisely",
-        "conditions": "Filter Conditions",
-        "add": "Add Condition",
-        "condition": "Condition {{number}}",
-        "field": "Select Field",
-        "operator": "Select Operator",
-        "value": "Enter Value",
-        "value_number": "Enter Value ({{unit}})",
-        "reset": "Reset",
-        "apply": "Apply Filter"
+        "title": "فیلتر پیشرفته",
+        "description": "یک یا چند شرط فیلتر اضافه کنید تا کاربران را دقیق پیدا کنید",
+        "conditions": "شرایط فیلتر",
+        "add": "افزودن شرط",
+        "condition": "شرط {{number}}",
+        "field": "انتخاب فیلد",
+        "operator": "انتخاب عملگر",
+        "value": "وارد کردن مقدار",
+        "value_number": "وارد کردن مقدار ({{unit}})",
+        "reset": "بازنشانی",
+        "apply": "اعمال فیلتر"
       },
       "fields": {
-        "email": "Email",
-        "id": "User ID",
-        "plan_id": "Subscription",
-        "transfer_enable": "Traffic",
-        "total_used": "Used Traffic",
-        "online_count": "Online Devices",
-        "expired_at": "Expire Time",
+        "email": "ایمیل",
+        "id": "شناسه کاربر",
+        "plan_id": "اشتراک",
+        "transfer_enable": "ترافیک",
+        "total_used": "ترافیک استفاده شده",
+        "online_count": "دستگاه‌های آنلاین",
+        "expired_at": "زمان انقضا",
         "uuid": "UUID",
         "token": "Token",
-        "banned": "Account Status",
-        "remark": "Remark",
-        "inviter_email": "Inviter Email",
-        "invite_user_id": "Inviter ID",
-        "is_admin": "Admin",
-        "is_staff": "Staff"
+        "banned": "وضعیت حساب",
+        "remark": "یادداشت",
+        "inviter_email": "ایمیل دعوت‌کننده",
+        "invite_user_id": "شناسه دعوت‌کننده",
+        "is_admin": "مدیر",
+        "is_staff": "کارمند"
       },
       "operators": {
-        "contains": "Contains",
-        "eq": "Equals",
-        "gt": "Greater Than",
-        "lt": "Less Than"
+        "contains": "شامل",
+        "eq": "برابر",
+        "gt": "بزرگتر از",
+        "lt": "کوچکتر از"
       },
       "status": {
-        "normal": "Normal",
-        "banned": "Banned"
+        "normal": "عادی",
+        "banned": "مسدود شده"
       },
       "boolean": {
-        "true": "Yes",
-        "false": "No"
+        "true": "بله",
+        "false": "خیر"
       }
     },
     "generate": {
-      "button": "Create User",
-      "title": "Create User",
+      "button": "ایجاد کاربر",
+      "title": "ایجاد کاربر",
       "form": {
-        "email": "Email",
-        "email_prefix": "Account (leave empty for batch generation)",
-        "email_domain": "Domain",
-        "password": "Password",
-        "password_placeholder": "Leave empty to use email as password",
-        "expire_time": "Expire Time",
-        "expire_time_placeholder": "Select user expire date, leave empty for permanent",
-        "permanent": "Permanent",
-        "subscription": "Subscription Plan",
-        "subscription_none": "None",
-        "generate_count": "Generate Count",
-        "generate_count_placeholder": "Enter count for batch generation",
-        "cancel": "Cancel",
-        "submit": "Generate",
-        "success": "Generated successfully",
-        "download_csv": "Export as CSV file"
+        "email": "ایمیل",
+        "email_prefix": "حساب (برای تولید دسته‌ای خالی بگذارید)",
+        "email_domain": "دامنه",
+        "password": "رمز عبور",
+        "password_placeholder": "خالی بگذارید تا از ایمیل به عنوان رمز عبور استفاده شود",
+        "expire_time": "زمان انقضا",
+        "expire_time_placeholder": "تاریخ انقضای کاربر را انتخاب کنید، برای دائمی خالی بگذارید",
+        "permanent": "دائمی",
+        "subscription": "طرح اشتراک",
+        "subscription_none": "هیچکدام",
+        "generate_count": "تعداد تولید",
+        "generate_count_placeholder": "برای تولید دسته‌ای تعداد را وارد کنید",
+        "cancel": "لغو",
+        "submit": "تولید",
+        "success": "با موفقیت تولید شد",
+        "download_csv": "صادرات به عنوان فایل CSV"
       }
     },
     "edit": {
-      "button": "Edit User Info",
-      "title": "User Management",
+      "button": "ویرایش اطلاعات کاربر",
+      "title": "مدیریت کاربران",
       "form": {
         "email": "Email",
         "email_placeholder": "Please enter email",
@@ -2847,86 +2847,86 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
   },
   "subscribe": {
     "plan": {
-      "title": "Subscription Plans",
-      "add": "Add Plan",
-      "search": "Search plans...",
+      "title": "طرح‌های اشتراک",
+      "add": "افزودن طرح",
+      "search": "جستجوی طرح‌ها...",
       "sort": {
-        "edit": "Edit Sort",
-        "save": "Save Sort"
+        "edit": "ویرایش ترتیب",
+        "save": "ذخیره ترتیب"
       },
       "columns": {
-        "id": "ID",
-        "show": "Show",
-        "sell": "Sell",
-        "renew": "Renew",
-        "renew_tooltip": "Whether existing users can renew when the subscription stops selling",
-        "name": "Name",
-        "stats": "Statistics",
-        "group": "Permission Group",
-        "price": "Price",
-        "actions": "Actions",
-        "edit": "Edit",
-        "delete": "Delete",
+        "id": "شناسه",
+        "show": "نمایش",
+        "sell": "فروش",
+        "renew": "تمدید",
+        "renew_tooltip": "آیا کاربران موجود می‌توانند هنگام توقف فروش اشتراک تمدید کنند",
+        "name": "نام",
+        "stats": "آمار",
+        "group": "گروه دسترسی",
+        "price": "قیمت",
+        "actions": "عملیات",
+        "edit": "ویرایش",
+        "delete": "حذف",
         "delete_confirm": {
-          "title": "Confirm Delete",
-          "description": "This action will permanently delete this subscription and cannot be undone. Are you sure you want to continue?",
-          "success": "Successfully deleted"
+          "title": "تأیید حذف",
+          "description": "این عمل به طور دائمی این اشتراک را حذف می‌کند و قابل بازگشت نیست. آیا مطمئن هستید که می‌خواهید ادامه دهید؟",
+          "success": "با موفقیت حذف شد"
         },
         "price_period": {
-          "monthly": "Monthly",
-          "quarterly": "Quarterly",
-          "half_yearly": "Half Yearly",
-          "yearly": "Yearly",
-          "two_yearly": "Two Years",
-          "three_yearly": "Three Years",
-          "onetime": "One Time",
-          "reset_traffic": "Reset Traffic",
-          "no_price": "No Price",
+          "monthly": "ماهانه",
+          "quarterly": "سه‌ماهه",
+          "half_yearly": "شش‌ماهه",
+          "yearly": "سالانه",
+          "two_yearly": "دو ساله",
+          "three_yearly": "سه ساله",
+          "onetime": "یکباره",
+          "reset_traffic": "بازنشانی ترافیک",
+          "no_price": "بدون قیمت",
           "unit": {
-            "month": "/month",
-            "quarter": "/quarter",
-            "half_year": "/half year",
-            "year": "/year",
-            "two_year": "/2 years",
-            "three_year": "/3 years",
-            "times": "/time"
+            "month": "/ماه",
+            "quarter": "/سه‌ماه",
+            "half_year": "/شش‌ماه",
+            "year": "/سال",
+            "two_year": "/2 سال",
+            "three_year": "/3 سال",
+            "times": "/بار"
           }
         }
       },
       "form": {
-        "add_title": "Add Plan",
-        "edit_title": "Edit Plan",
+        "add_title": "افزودن طرح",
+        "edit_title": "ویرایش طرح",
         "name": {
-          "label": "Plan Name",
-          "placeholder": "Enter plan name"
+          "label": "نام طرح",
+          "placeholder": "نام طرح را وارد کنید"
         },
         "group": {
-          "label": "Server Group",
-          "add": "Add Group",
-          "placeholder": "Select server group"
+          "label": "گروه سرور",
+          "add": "افزودن گروه",
+          "placeholder": "گروه سرور را انتخاب کنید"
         },
         "transfer": {
-          "label": "Traffic",
-          "placeholder": "Enter traffic limit",
+          "label": "ترافیک",
+          "placeholder": "محدودیت ترافیک را وارد کنید",
           "unit": "GB"
         },
         "speed": {
-          "label": "Speed Limit",
-          "placeholder": "Enter speed limit",
+          "label": "محدودیت سرعت",
+          "placeholder": "محدودیت سرعت را وارد کنید",
           "unit": "Mbps"
         },
         "price": {
-          "title": "Price Settings",
-          "base_price": "Base Price",
+          "title": "تنظیمات قیمت",
+          "base_price": "قیمت پایه",
           "clear": {
-            "button": "Clear",
-            "tooltip": "Clear all prices"
+            "button": "پاک کردن",
+            "tooltip": "پاک کردن تمام قیمت‌ها"
           },
           "period": {
-            "monthly": "Monthly",
-            "months": "{{count}} Months"
+            "monthly": "ماهانه",
+            "months": "{{count}} ماه"
           },
-          "onetime_desc": "One-time traffic package, no time limit",
+          "onetime_desc": "بسته ترافیک یکباره، بدون محدودیت زمانی",
           "reset_desc": "Reset traffic package, can be used multiple times"
         },
         "device": {
