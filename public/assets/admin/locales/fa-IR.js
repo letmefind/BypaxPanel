@@ -1552,8 +1552,8 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
     }
   },
   "route": {
-    "title": "Route Management",
-    "description": "Manage all route groups, including adding, deleting, and editing operations.",
+    "title": "مدیریت مسیر",
+    "description": "مدیریت تمام گروه‌های مسیر، شامل عملیات افزودن، حذف و ویرایش.",
     "columns": {
       "id": "Group ID",
       "remarks": "Remarks",
@@ -1603,69 +1603,69 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
     }
   },
   "order": {
-    "title": "Order Management",
-    "description": "Here you can view user orders, including assignment, viewing, deletion and other operations.",
+    "title": "مدیریت سفارش",
+    "description": "در اینجا می‌توانید سفارشات کاربران را مشاهده کنید، شامل اختصاص، مشاهده، حذف و سایر عملیات.",
     "table": {
       "columns": {
-        "tradeNo": "Order No.",
-        "type": "Type",
-        "plan": "Subscription Plan",
-        "period": "Period",
-        "amount": "Payment Amount",
-        "status": "Order Status",
-        "commission": "Commission Amount",
-        "commissionStatus": "Commission Status",
-        "createdAt": "Created At"
+        "tradeNo": "شماره سفارش",
+        "type": "نوع",
+        "plan": "طرح اشتراک",
+        "period": "دوره",
+        "amount": "مبلغ پرداخت",
+        "status": "وضعیت سفارش",
+        "commission": "مبلغ کمیسیون",
+        "commissionStatus": "وضعیت کمیسیون",
+        "createdAt": "ایجاد شده در"
       }
     },
     "type": {
-      "NEW": "New Purchase",
-      "RENEWAL": "Renewal",
-      "UPGRADE": "Upgrade",
-      "RESET_FLOW": "Reset Traffic"
+      "NEW": "خرید جدید",
+      "RENEWAL": "تمدید",
+      "UPGRADE": "ارتقا",
+      "RESET_FLOW": "بازنشانی ترافیک"
     },
     "period": {
-      "month_price": "Monthly",
-      "quarter_price": "Quarterly",
-      "half_year_price": "Semi-annually",
-      "year_price": "Annually",
-      "two_year_price": "2 Years",
-      "three_year_price": "3 Years",
-      "onetime_price": "One-time",
-      "reset_price": "Reset Package"
+      "month_price": "ماهانه",
+      "quarter_price": "سه‌ماهه",
+      "half_year_price": "شش‌ماهه",
+      "year_price": "سالانه",
+      "two_year_price": "2 ساله",
+      "three_year_price": "3 ساله",
+      "onetime_price": "یکباره",
+      "reset_price": "بسته بازنشانی"
     },
     "status": {
-      "PENDING": "Pending",
-      "PROCESSING": "Processing",
-      "CANCELLED": "Cancelled",
-      "COMPLETED": "Completed",
-      "DISCOUNTED": "Discounted",
-      "tooltip": "After marking as [Paid], the system will proceed with activation and completion"
+      "PENDING": "در انتظار",
+      "PROCESSING": "در حال پردازش",
+      "CANCELLED": "لغو شده",
+      "COMPLETED": "تکمیل شده",
+      "DISCOUNTED": "تخفیف داده شده",
+      "tooltip": "پس از علامت‌گذاری به عنوان [پرداخت شده]، سیستم فعال‌سازی و تکمیل را انجام می‌دهد"
     },
     "commission": {
-      "PENDING": "Pending",
-      "PROCESSING": "Processing",
-      "VALID": "Valid",
-      "INVALID": "Invalid"
+      "PENDING": "در انتظار",
+      "PROCESSING": "در حال پردازش",
+      "VALID": "معتبر",
+      "INVALID": "نامعتبر"
     },
     "actions": {
-      "markAsPaid": "Mark as Paid",
-      "cancel": "Cancel Order",
-      "openMenu": "Open Menu",
-      "reset": "Reset"
+      "markAsPaid": "علامت‌گذاری به عنوان پرداخت شده",
+      "cancel": "لغو سفارش",
+      "openMenu": "باز کردن منو",
+      "reset": "بازنشانی"
     },
     "search": {
-      "placeholder": "Search orders..."
+      "placeholder": "جستجوی سفارشات..."
     },
     "dialog": {
-      "title": "Order Information",
-      "basicInfo": "Basic Information",
-      "amountInfo": "Amount Information",
-      "timeInfo": "Time Information",
-      "commissionInfo": "Commission Information",
-      "commissionStatusActive": "Active",
-      "addOrder": "Add Order",
-      "assignOrder": "Assign Order",
+      "title": "اطلاعات سفارش",
+      "basicInfo": "اطلاعات پایه",
+      "amountInfo": "اطلاعات مبلغ",
+      "timeInfo": "اطلاعات زمان",
+      "commissionInfo": "اطلاعات کمیسیون",
+      "commissionStatusActive": "فعال",
+      "addOrder": "افزودن سفارش",
+      "assignOrder": "اختصاص سفارش",
       "fields": {
         "userEmail": "User Email",
         "orderPeriod": "Order Period",
@@ -1700,8 +1700,8 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
     }
   },
   "coupon": {
-    "title": "Coupon Management",
-    "description": "Here you can manage coupons, including adding, viewing, and deleting operations.",
+    "title": "مدیریت کوپن",
+    "description": "در اینجا می‌توانید کوپن‌ها را مدیریت کنید، شامل عملیات افزودن، مشاهده و حذف.",
     "table": {
       "columns": {
         "id": "ID",
@@ -1824,8 +1824,8 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
     }
   },
   "notice": {
-    "title": "Notice Management",
-    "description": "Here you can configure notices, including adding, deleting, editing and other operations.",
+    "title": "مدیریت اعلان",
+    "description": "در اینجا می‌توانید اعلان‌ها را پیکربندی کنید، شامل عملیات افزودن، حذف، ویرایش و سایر عملیات.",
     "table": {
       "columns": {
         "id": "ID",
