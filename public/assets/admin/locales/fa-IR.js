@@ -350,62 +350,62 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
       "description": "پیکربندی اطلاعات پایه سایت، شامل نام سایت، توضیحات، واحد ارز و سایر تنظیمات اصلی.",
       "form": {
         "siteName": {
-          "label": "Site Name",
-          "placeholder": "Please enter site name",
-          "description": "Used where site name needs to be displayed."
+          "label": "نام سایت",
+          "placeholder": "لطفاً نام سایت را وارد کنید",
+          "description": "در جایی که نام سایت باید نمایش داده شود استفاده می‌شود."
         },
         "siteDescription": {
-          "label": "Site Description",
-          "placeholder": "Please enter site description",
-          "description": "Used where site description needs to be displayed."
+          "label": "توضیحات سایت",
+          "placeholder": "لطفاً توضیحات سایت را وارد کنید",
+          "description": "در جایی که توضیحات سایت باید نمایش داده شود استفاده می‌شود."
         },
         "siteUrl": {
-          "label": "Site URL",
-          "placeholder": "Please enter site URL, without trailing /",
-          "description": "Current website URL, will be used in emails and other places where URL is needed."
+          "label": "آدرس سایت",
+          "placeholder": "لطفاً آدرس سایت را وارد کنید، بدون / در انتها",
+          "description": "آدرس فعلی وب‌سایت، در ایمیل‌ها و سایر مکان‌هایی که URL نیاز است استفاده می‌شود."
         },
         "forceHttps": {
-          "label": "Force HTTPS",
-          "description": "Need to enable when the site is not using HTTPS but CDN or reverse proxy has forced HTTPS."
+          "label": "اجبار HTTPS",
+          "description": "هنگامی که سایت از HTTPS استفاده نمی‌کند اما CDN یا پروکسی معکوس HTTPS را اجباری کرده است، باید فعال شود."
         },
         "logo": {
-          "label": "LOGO",
-          "placeholder": "Please enter LOGO URL, without trailing /",
-          "description": "Used where LOGO needs to be displayed."
+          "label": "لوگو",
+          "placeholder": "لطفاً آدرس لوگو را وارد کنید، بدون / در انتها",
+          "description": "در جایی که لوگو باید نمایش داده شود استفاده می‌شود."
         },
         "subscribeUrl": {
-          "label": "Subscribe URL",
-          "placeholder": "Used for subscription, multiple URLs separated by ','. Leave empty to use site URL.",
-          "description": "Used for subscription, leave empty to use site URL."
+          "label": "آدرس اشتراک",
+          "placeholder": "برای اشتراک استفاده می‌شود، چندین URL با ',' جدا می‌شوند. خالی بگذارید تا از آدرس سایت استفاده شود.",
+          "description": "برای اشتراک استفاده می‌شود، خالی بگذارید تا از آدرس سایت استفاده شود."
         },
         "tosUrl": {
-          "label": "Terms of Service (TOS) URL",
-          "placeholder": "Please enter TOS URL, without trailing /",
-          "description": "Used to link to Terms of Service (TOS)"
+          "label": "آدرس شرایط استفاده (TOS)",
+          "placeholder": "لطفاً آدرس TOS را وارد کنید، بدون / در انتها",
+          "description": "برای لینک به شرایط استفاده (TOS) استفاده می‌شود"
         },
         "stopRegister": {
-          "label": "Stop New User Registration",
-          "description": "When enabled, no one will be able to register."
+          "label": "توقف ثبت‌نام کاربر جدید",
+          "description": "هنگامی که فعال شود، هیچ کس قادر به ثبت‌نام نخواهد بود."
         },
         "tryOut": {
-          "label": "Registration Trial",
-          "placeholder": "Disabled",
-          "description": "Select the subscription for trial, if no options please add in subscription management first.",
+          "label": "آزمایش ثبت‌نام",
+          "placeholder": "غیرفعال",
+          "description": "اشتراک را برای آزمایش انتخاب کنید، اگر گزینه‌ای وجود ندارد لطفاً ابتدا در مدیریت اشتراک اضافه کنید.",
           "duration": {
-            "label": "Trial Duration",
+            "label": "مدت زمان آزمایش",
             "placeholder": "0",
-            "description": "Trial duration in hours."
+            "description": "مدت زمان آزمایش به ساعت."
           }
         },
         "currency": {
-          "label": "Currency Unit",
+          "label": "واحد ارز",
           "placeholder": "CNY",
-          "description": "For display only, changing this will affect all currency units in the system."
+          "description": "فقط برای نمایش، تغییر این مورد بر تمام واحدهای ارز در سیستم تأثیر می‌گذارد."
         },
         "currencySymbol": {
-          "label": "Currency Symbol",
+          "label": "نماد ارز",
           "placeholder": "¥",
-          "description": "For display only, changing this will affect all currency symbols in the system."
+          "description": "فقط برای نمایش، تغییر این مورد بر تمام نمادهای ارز در سیستم تأثیر می‌گذارد."
         }
       }
     },
