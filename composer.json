@@ -1,13 +1,15 @@
 {
-    "name": "xboard/xboard",
+    "name": "bypax/panel",
     "type": "project",
-    "description": "xboard is a proxy protocol manage.",
+    "description": "Bypax Panel is a modern proxy protocol management system.",
     "keywords": [
-        "xboard",
+        "bypax",
+        "bypax-panel",
         "v2ray",
         "shadowsocks",
         "trojan",
-        "laravel"
+        "laravel",
+        "proxy-panel"
     ],
     "license": "MIT",
     "require": {

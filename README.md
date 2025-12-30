@@ -1,8 +1,7 @@
-# Xboard
+# Bypax Panel
 
 <div align="center">
 
-[![Telegram](https://img.shields.io/badge/Telegram-Channel-blue)](https://t.me/XboardOfficial)
 ![PHP](https://img.shields.io/badge/PHP-8.2+-green.svg)
 ![MySQL](https://img.shields.io/badge/MySQL-5.7+-blue.svg)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -11,7 +10,7 @@
 
 ## 📖 Introduction
 
-Xboard is a modern panel system built on Laravel 11, focusing on providing a clean and efficient user experience.
+Bypax Panel is a modern panel system built on Laravel 11, focusing on providing a clean and efficient user experience. It is a rebranded and enhanced version of Xboard, with improved internationalization support including English, Chinese, Korean, and Persian languages.
 
 ## ✨ Features
 
@@ -20,18 +19,27 @@ Xboard is a modern panel system built on Laravel 11, focusing on providing a cle
 - 📱 Modern user frontend (Vue3 + TypeScript)
 - 🐳 Ready-to-use Docker deployment solution
 - 🎯 Optimized system architecture for better maintainability
+- 🌍 Multi-language support: English, Chinese, Korean, and Persian
+- 🔧 Simplified installation process with automated scripts
 
 ## 🚀 Quick Start
 
+### One-Command Installation
+
 ```bash
-git clone -b compose --depth 1 https://github.com/cedar2025/Xboard && \
-cd Xboard && \
-docker compose run -it --rm \
-    -e ENABLE_SQLITE=true \
-    -e ENABLE_REDIS=true \
-    -e ADMIN_ACCOUNT=admin@demo.com \
-    web php artisan xboard:install && \
-docker compose up -d
+git clone --depth 1 https://github.com/letmefind/BypaxPanel.git && \
+cd BypaxPanel && \
+cp compose.sample.yaml docker-compose.yml && \
+bash install.sh
+```
+
+### Custom Admin Email
+
+If you want to set a custom admin email, set the `ADMIN_ACCOUNT` environment variable:
+
+```bash
+export ADMIN_ACCOUNT=admin@yourdomain.com
+bash install.sh
 ```
 
 > After installation, visit: http://SERVER_IP:7001  
@@ -39,17 +47,14 @@ docker compose up -d
 
 ## 📖 Documentation
 
-### 🔄 Upgrade Notice
-> 🚨 **Important:** This version involves significant changes. Please strictly follow the upgrade documentation and backup your database before upgrading. Note that upgrading and migration are different processes, do not confuse them.
+### Installation Guides
+- [Deploy with Docker Compose](./docs/en/installation/docker-compose.md) - Recommended for most users
+- [Deploy with 1Panel](./docs/en/installation/1panel.md)
+- [Deploy with aaPanel](./docs/en/installation/aapanel.md)
+- [Deploy with aaPanel + Docker](./docs/en/installation/aapanel-docker.md)
 
 ### Development Guides
-- [Plugin Development Guide](./docs/en/development/plugin-development-guide.md) - Complete guide for developing XBoard plugins
-
-### Deployment Guides
-- [Deploy with 1Panel](./docs/en/installation/1panel.md)
-- [Deploy with Docker Compose](./docs/en/installation/docker-compose.md)
-- [Deploy with aaPanel](./docs/en/installation/aapanel.md)
-- [Deploy with aaPanel + Docker](./docs/en/installation/aapanel-docker.md) (Recommended)
+- [Plugin Development Guide](./docs/en/development/plugin-development-guide.md) - Complete guide for developing Bypax Panel plugins
 
 ### Migration Guides
 - [Migrate from v2board dev](./docs/en/migration/v2board-dev.md)
@@ -73,15 +78,6 @@ docker compose up -d
 
 This project is for learning and communication purposes only. Users are responsible for any consequences of using this project.
 
-## 🌟 Maintenance Notice
-
-This project is currently under light maintenance. We will:
-- Fix critical bugs and security issues
-- Review and merge important pull requests
-- Provide necessary updates for compatibility
-
-However, new feature development may be limited.
-
 ## 🔔 Important Notes
 
 1. Restart required after modifying admin path:
@@ -91,10 +87,24 @@ docker compose restart
 
 2. For aaPanel installations, restart the Octane daemon process
 
+3. Update command:
+```bash
+php artisan bypax:update
+```
+
 ## 🤝 Contributing
 
 Issues and Pull Requests are welcome to help improve the project.
 
-## 📈 Star History
+## 🙏 Acknowledgments & Attribution
 
-[![Stargazers over time](https://starchart.cc/cedar2025/Xboard.svg)](https://starchart.cc/cedar2025/Xboard)
+Bypax Panel is based on [Xboard](https://github.com/cedar2025/Xboard), which in turn is based on [V2Board](https://github.com/v2board/v2board). We acknowledge and credit the original developers for their excellent work.
+
+- **Xboard**: Original modern panel system implementation
+- **V2Board**: Original panel system foundation
+
+This project maintains compatibility with the original systems while adding improvements and additional language support.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
