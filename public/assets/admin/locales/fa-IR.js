@@ -263,11 +263,11 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
     }
   },
   "settings": {
-    "title": "System Settings",
-    "description": "Manage core system configurations, including site, security, subscription, invite commission, nodes, email, and notifications",
+    "title": "تنظیمات سیستم",
+    "description": "مدیریت پیکربندی‌های اصلی سیستم، شامل سایت، امنیت، اشتراک، کمیسیون دعوت، نودها، ایمیل و اعلان‌ها",
     "server": {
-      "title": "Server Configuration",
-      "description": "Configure node communication and synchronization settings, including communication keys, polling intervals, load balancing and other advanced options.",
+      "title": "پیکربندی سرور",
+      "description": "پیکربندی تنظیمات ارتباط و همگام‌سازی نودها، شامل کلیدهای ارتباطی، فواصل نظرسنجی، تعادل بار و سایر گزینه‌های پیشرفته.",
       "server_token": {
         "title": "Communication Token",
         "placeholder": "Enter communication token",
@@ -346,8 +346,8 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
       "saving": "Saving..."
     },
     "site": {
-      "title": "Site Settings",
-      "description": "Configure basic site information, including site name, description, currency unit, and other core settings.",
+      "title": "تنظیمات سایت",
+      "description": "پیکربندی اطلاعات پایه سایت، شامل نام سایت، توضیحات، واحد ارز و سایر تنظیمات اصلی.",
       "form": {
         "siteName": {
           "label": "Site Name",
@@ -410,8 +410,8 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
       }
     },
     "safe": {
-      "title": "Security Settings",
-      "description": "Configure system security options, including login verification, password policies, and API access settings.",
+      "title": "تنظیمات امنیتی",
+      "description": "پیکربندی گزینه‌های امنیتی سیستم، شامل تأیید ورود، سیاست‌های رمز عبور و تنظیمات دسترسی API.",
       "form": {
         "emailVerify": {
           "label": "Email Verification",
@@ -530,8 +530,8 @@ window.BYPAX_TRANSLATIONS['fa-IR'] = window.XBOARD_TRANSLATIONS['fa-IR'] = {
       }
     },
     "subscribe": {
-      "title": "Subscription Settings",
-      "description": "Manage subscription-related configurations, including subscription link format, update frequency, traffic statistics, and other settings.",
+      "title": "تنظیمات اشتراک",
+      "description": "مدیریت پیکربندی‌های مربوط به اشتراک، شامل فرمت لینک اشتراک، فرکانس به‌روزرسانی، آمار ترافیک و سایر تنظیمات.",
       "plan_change_enable": {
         "title": "Allow Subscription Changes",
         "description": "When enabled, users will be able to change their subscription plans."
